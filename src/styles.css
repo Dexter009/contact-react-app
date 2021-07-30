@@ -1,0 +1,58 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-size: 32px;
+}
+.container .contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    color: rgb(196, 57, 80);
+    background-color: #ffffff;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 10px 10px 25px -16px rgba(50, 116, 50, 0.7);
+    border-radius: 10px;
+    width: 400px;
+    max-height: 600px;
+    margin-bottom: 10px;
+  }
+
+  .user-details{
+    margin-top: 10px;
+    padding: 15px 0;
+    border-top: solid 2px green;
+  }
+  .contact-card p {
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 10px;
+    margin-top: 0;
+  }
+
+  img{
+    height: 250px;
+    width: 420px;
+    margin-bottom: 10px;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+}
+
+.info {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    color: rgb(196, 57, 80);
+    font-weight: 700;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    border: solid 2px rgb(196, 57, 80);
+  }
+
+.contacts{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
