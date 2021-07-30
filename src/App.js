@@ -2,7 +2,7 @@ import './App.css';
 import "./styles.css";
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAddressBook, faEnvelope, faHome, faPhoneSquare, faUser } from '@fortawesome/fontawesome-free-solid'
+import { faAddressBook, faBuilding, faEnvelope, faHome, faPhoneSquare, faUser } from '@fortawesome/fontawesome-free-solid'
 import { GoogleMap, Marker } from "react-google-maps";
 
 const App = () => {
@@ -28,6 +28,7 @@ const App = () => {
             email={contact.email}
             phone={contact.phone}
             address={contact.address.suite+','+contact.address.street+","+contact.address.city+","+contact.address.zipcode}
+            company={contact.company.name+'-'+contact.company.catchPhrase}
         />
       ))}
       </div>
@@ -47,10 +48,12 @@ const ContactCard = props => {
       <div className="user-details">
         <p><FontAwesomeIcon icon={faUser} /> Name: {props.name}</p>
         <p><FontAwesomeIcon icon={faEnvelope} /> Email: {props.email}</p>
+
         {showNum &&
         <div className = "more-info" >
         <p><FontAwesomeIcon icon={faPhoneSquare} /> Phone: {props.phone}</p>
         <p><FontAwesomeIcon icon={faHome} /> Address: {props.address}</p>
+        <p><FontAwesomeIcon icon = {faBuilding} /> Company : {props.company}</p>
         </div>}
         <button className = "info" id = "myButton1" onClick={() => {setShowNum(!showNum);}}>
           Toggle Info
